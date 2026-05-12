@@ -19,6 +19,7 @@ export default function MobileEmailTab() {
         fontWeight: 700,
         letterSpacing: "2px",
         padding: "12px 18px",
+        minHeight: 48,
         borderRadius: 4,
         boxShadow: "0 4px 12px rgba(0, 0, 0, 0.4)",
         textDecoration: "none",

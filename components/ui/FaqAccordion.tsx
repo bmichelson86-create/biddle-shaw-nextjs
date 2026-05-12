@@ -33,7 +33,7 @@ export default function FaqAccordion({ items }: { items: FaqItem[] }) {
                 aria-expanded={isOpen}
                 aria-controls={panelId}
                 onClick={() => setOpenIndex(isOpen ? null : i)}
-                className="w-full flex justify-between items-center text-left font-display uppercase cursor-pointer"
+                className="w-full flex justify-between items-center text-left font-display uppercase cursor-pointer py-3 min-h-[48px]"
                 style={{ fontSize: 18, color: "#353535" }}
               >
                 <span>{item.question}</span>

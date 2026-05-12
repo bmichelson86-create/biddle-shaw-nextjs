@@ -102,7 +102,7 @@ export default function ServicesGrid() {
             <Link
               key={service.slug}
               href={`/services/${service.slug}`}
-              className={`services-card group flex flex-row items-center justify-start text-left py-4 px-6 md:flex-col md:items-center md:justify-center md:text-center md:py-[25px] md:px-[20px] transition-colors hover:bg-darker ${
+              className={`services-card group flex flex-row items-center justify-start text-left py-4 px-6 min-h-[48px] md:flex-col md:items-center md:justify-center md:text-center md:py-[25px] md:px-[20px] transition-colors hover:bg-darker ${
                 isLast ? "" : "border-b border-[#1a1a1a] md:border-b-0 md:border-r md:border-r-[#1a1a1a]"
               }`}
               style={{ backgroundColor: "#353535" }}

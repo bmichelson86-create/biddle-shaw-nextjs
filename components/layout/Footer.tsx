@@ -46,7 +46,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             {SERVICES.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className="hover:text-red transition-colors">
+                <Link href={item.href} className="block py-2 hover:text-red transition-colors">
                   {item.label}
                 </Link>
               </li>
@@ -61,7 +61,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             {COMPANY.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className="hover:text-red transition-colors">
+                <Link href={item.href} className="block py-2 hover:text-red transition-colors">
                   {item.label}
                 </Link>
               </li>
@@ -83,14 +83,14 @@ export default function Footer() {
               <a
                 key={p.href}
                 href={p.href}
-                className="block hover:text-red transition-colors"
+                className="block py-2 hover:text-red transition-colors"
               >
                 {p.display}
               </a>
             ))}
             <a
               href={`mailto:${EMAIL}`}
-              className="block hover:text-red transition-colors"
+              className="block py-2 hover:text-red transition-colors"
             >
               {EMAIL}
             </a>
