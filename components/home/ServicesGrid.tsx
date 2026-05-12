@@ -101,7 +101,7 @@ export default function ServicesGrid() {
             <Link
               key={service.slug}
               href={`/services/${service.slug}`}
-              className={`services-card group flex flex-col items-center text-center transition-colors hover:bg-darker ${
+              className={`services-card group flex flex-col items-center text-center transition-colors hover:bg-darker col-span-1 last:col-span-2 last:mx-auto last:w-1/2 sm:w-auto sm:col-span-1 ${
                 i < SERVICES.length - 1 ? "border-r" : ""
               }`}
               style={{
