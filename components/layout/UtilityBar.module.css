@@ -1,0 +1,49 @@
+.strokeBtn {
+  --border-right: 4px;
+  --text-stroke-color: rgba(255, 255, 255, 0.9);
+  --animation-color: #a81010;
+  --fs-size: 13px;
+
+  position: relative;
+  display: inline-block;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: var(--fs-size);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+.actualText {
+  display: inline-block;
+}
+
+.hoverText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  overflow: hidden;
+  color: var(--animation-color);
+  -webkit-text-stroke: 1px var(--animation-color);
+  border-right: var(--border-right) solid var(--animation-color);
+  filter: drop-shadow(0 0 6px var(--animation-color));
+  white-space: nowrap;
+  transition: width 0.5s cubic-bezier(0.6, 0, 0.4, 1);
+}
+
+.strokeBtn:hover .hoverText,
+.strokeBtn:focus-visible .hoverText {
+  width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hoverText {
+    transition: none;
+  }
+}
