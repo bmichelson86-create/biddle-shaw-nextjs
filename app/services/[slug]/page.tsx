@@ -15,6 +15,7 @@ type ServiceContent = {
 const SERVICES: Record<string, ServiceContent> = {
   auto: {
     title: "Auto Insurance",
+    heroImage: "/images/auto-feat.webp",
     paragraphs: [
       "Whether you're commuting across the Bay, road-tripping up the coast, or storing a weekend classic in the garage, our auto policies are built to fit how you actually drive. We compare carriers across California to find the right balance of liability, collision, comprehensive, and uninsured-motorist coverage at a price that makes sense.",
       "Classic and collector vehicles are covered under the same conversation — agreed-value policies, limited-mileage discounts, and specialty carriers who understand that a 1967 fastback isn't a daily driver. Tell us what's in the garage and we'll find the program that protects it properly.",
@@ -45,6 +46,7 @@ const SERVICES: Record<string, ServiceContent> = {
   },
   home: {
     title: "Home Insurance",
+    heroImage: "/images/home-feat.webp",
     paragraphs: [
       "California homeownership comes with a unique set of risks — wildfire exposure, earthquake considerations, and a property market where rebuild costs rarely match purchase price. Our home policies are written to those realities, with dwelling limits that reflect actual replacement cost, not a generic estimate.",
       "We walk you through the optional coverages that matter most in our region: extended replacement cost, ordinance-or-law, water backup, and scheduled personal property for the items a base policy under-insures. Where standalone wildfire or earthquake coverage is appropriate, we coordinate it alongside your homeowners policy so the gaps are closed.",
@@ -75,6 +77,7 @@ const SERVICES: Record<string, ServiceContent> = {
   },
   "landlord-protection": {
     title: "Landlord Protection",
+    heroImage: "/images/landlord-feat.webp",
     paragraphs: [
       "Owning rental property — single-family, duplex, or a small portfolio — exposes you to risks a homeowners policy won't cover. A landlord protection policy (often called a DP-3) is built for that, with dwelling and other-structures coverage written on a replacement-cost basis and liability scaled for tenant-occupied properties.",
       "We layer in the pieces that matter for landlords: loss of rents while a covered claim is being repaired, premises liability with limits high enough to actually do something, and optional vandalism and ordinance-or-law endorsements. For multi-property owners, we'll structure coverage so it's coherent across the portfolio rather than a patchwork of one-off policies.",
@@ -136,6 +139,7 @@ const SERVICES: Record<string, ServiceContent> = {
   },
   renters: {
     title: "Renters Insurance",
+    heroImage: "/images/renters-feat.webp",
     paragraphs: [
       "Renters insurance is the most cost-effective policy most people will ever buy: a few dollars a month that covers your belongings, your liability, and your living expenses if your unit becomes uninhabitable. In a California rental market where one apartment fire or burst pipe can wipe out a household's savings, going without it is a real risk.",
       "We write policies that match how you actually live — coverage limits sized to your belongings (not an arbitrary default), liability at a level that protects you if a guest is injured, and additional-living-expenses coverage so a displacement doesn't turn into a financial crisis.",
@@ -166,6 +170,7 @@ const SERVICES: Record<string, ServiceContent> = {
   },
   umbrella: {
     title: "Umbrella Insurance",
+    heroImage: "/images/umbrella-feat.webp",
     paragraphs: [
       "Umbrella insurance sits on top of your auto, home, and other underlying liability policies, kicking in when a claim exceeds those base limits. For a relatively modest premium, you can add a million dollars or more of liability protection — the kind of coverage that matters in a serious at-fault auto accident or a major property-related lawsuit.",
       "We help clients right-size umbrella limits based on assets, income, and exposure (rental properties, teen drivers, pools, frequent guests). The goal isn't to oversell coverage; it's to make sure that one bad event doesn't put your savings, retirement, or home at risk.",
@@ -196,6 +201,7 @@ const SERVICES: Record<string, ServiceContent> = {
   },
   "commercial-workers-comp": {
     title: "Commercial & Workers Compensation",
+    heroImage: "/images/commerical-workers-comp-feat.webp",
     paragraphs: [
       "Small businesses, contractors, and professional services across the Bay Area trust us for coverage that scales with the operation. We write commercial general liability, business owners policies (BOP), commercial auto, professional liability, and the specialty endorsements specific industries need — all from a panel of carriers who actually want California risks.",
       "Workers compensation is California-mandated for nearly every business with employees, and the wrong classification or under-reported payroll can turn into a six-figure audit surprise. We work with carriers and a payroll-aware approach so the policy is priced correctly from the start, and we stay engaged through audits, mod changes, and claims.",
@@ -272,7 +278,7 @@ export default async function ServicePage({
       <div className="relative w-full" style={{ height: 340 }}>
         <Image
           src={service.heroImage ?? "/images/hero-1.webp"}
-          alt=""
+          alt={`${service.title} — Biddle-Shaw Insurance Services`}
           fill
           priority
           sizes="100vw"
