@@ -21,7 +21,7 @@ export default function InsuranceServicesPage() {
             Insurance Services
           </h1>
           <p className="mt-5 max-w-2xl font-body text-base md:text-lg leading-relaxed text-text">
-            Six coverage lines, written across a panel of California carriers.
+            Seven coverage lines, written across a panel of California carriers.
             Tap any service to see what's covered, then request a quote — we'll
             shop the market on your behalf and recommend the policy that
             actually fits.
