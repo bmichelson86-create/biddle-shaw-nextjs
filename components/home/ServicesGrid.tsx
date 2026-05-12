@@ -94,24 +94,25 @@ export default function ServicesGrid() {
 
   return (
     <section ref={sectionRef} className="w-full">
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-7">
         {SERVICES.map((service, i) => {
           const { Icon } = service;
+          const isLast = i === SERVICES.length - 1;
           return (
             <Link
               key={service.slug}
               href={`/services/${service.slug}`}
-              className={`services-card group flex flex-col items-center justify-center text-center transition-colors hover:bg-darker col-span-1 last:col-span-2 lg:last:col-span-1 ${
-                i < SERVICES.length - 1 ? "border-r" : ""
+              className={`services-card group flex flex-row items-center justify-start text-left py-4 px-6 md:flex-col md:items-center md:justify-center md:text-center md:py-[25px] md:px-[20px] transition-colors hover:bg-darker ${
+                isLast ? "" : "border-b border-[#1a1a1a] md:border-b-0 md:border-r md:border-r-[#1a1a1a]"
               }`}
-              style={{
-                backgroundColor: "#353535",
-                padding: "25px 20px 10px",
-                borderRightColor: "#1a1a1a",
-              }}
+              style={{ backgroundColor: "#353535" }}
             >
-              <div className="w-16 h-16 mb-4 flex items-center justify-center text-[#a81010] group-hover:text-white transition-colors duration-300">
-                <Icon width={48} height={48} strokeWidth={1.5} aria-hidden />
+              <div className="flex items-center justify-center text-[#a81010] group-hover:text-white transition-colors duration-300 flex-shrink-0 mr-4 md:mr-0 md:mb-4 md:w-16 md:h-16">
+                <Icon
+                  className="w-8 h-8 md:w-12 md:h-12"
+                  strokeWidth={1.5}
+                  aria-hidden
+                />
               </div>
               <h3 className="font-display uppercase text-white text-base md:text-lg tracking-wider leading-snug">
                 {service.title}
