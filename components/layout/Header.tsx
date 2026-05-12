@@ -48,6 +48,9 @@ export default function Header() {
           >
             Insurance Services, Inc.
           </span>
+          <span className="block md:hidden text-[11px] text-[#666666] font-normal mt-0.5 not-italic font-body">
+            Mon–Fri  8:30am – 5:30pm
+          </span>
         </Link>
 
         <address
